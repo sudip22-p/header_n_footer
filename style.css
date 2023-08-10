@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background-color: rgb(216 205 233 / 80%);
+    display: flex;
+    flex-direction: column;
+    align-items:normal;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 10px 15px;
+}
+header{
+    background-color: white;
+    box-shadow: 0px 5px 8px rgba(182, 179, 179, 0.9);
+    padding: 10px 20px;
+    height: 15vh;
+    padding-top: 30px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid rgb(219, 50, 50);
+}
+.ul{
+    margin-top: 20px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 50%;
+}
+ul li{
+    list-style-type: none;
+}
+ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+ul li a:hover,ul li a.active{
+    text-decoration: underline 2px;
+    text-underline-offset: 4px;
+    text-decoration-color: rgb(214, 211, 9);
+    color: rgb(120, 118, 223);
+}
+.btn{
+    font-weight: 800;
+    padding: 8px 15px;
+    background: transparent;
+    color: rgb(19, 228, 12);
+    background-color: rgb(231 10 10 / 70%);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    color: rgb(231 10 10 / 70%);
+    background-color: rgb(19, 228, 12);
+    text-decoration: none;
+}
+/*css for hamburger*/
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #62e68e;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+div.modeBtn{
+    z-index: 5;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid white; 
+    box-shadow: 0px 0px 30px black;
+    background-color: black;
+    color: white;
+    align-content: center;
+    font-size: 24px;
+    position: relative;
+    bottom: 7px;
+    text-align: center;
+    transition: 3s;
+}
+footer{
+    position: relative;
+    width: 100%;
+    color: black;
+    background-color: white;
+    height:auto;
+    padding: 10px 20px;
+    transition: 3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer div.up{
+    width: 100%;
+    padding: 1vw;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr 2fr;
+    grid-gap: 10px;
+}
+footer div.up .sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+footer div.up .sec h3{
+    font-size: 25px;
+    color: #62e68e;
+    font-family: 550;
+    margin-bottom: 5px;
+    text-align: left;
+}
+footer div.up .sec p{
+    color: #555;
+}
+footer div.up .sec .links{
+    display: flex;
+    gap: 25px;
+    padding: 15px;
+}
+footer a{
+    text-decoration: none;
+    color: #555;
+}
+
+div.dark_mode{
+    color:black;
+    background-color: white;
+    border: 3px solid black; 
+    box-shadow: 0px 0px 30px white;
+    transition: 3s;
+}
+body.dark_body{
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 3s;
+
+}
+footer.dark{
+    background-color: black;
+    transition: 3s;
+    color: white;
+}
+header.dark{
+    background-color: black;
+    transition: 3s;
+    color: white;
+}
+footer a.white{
+    color: white;
+    transition: 2s;
+}
+header a.white{
+    color: white;
+    transition: 2s;
+}
+@media (max-width:1024px) {
+    .hamburger{
+        display: block;
+    }
+    .ul{
+        display: none;
+    }
+    
+.listOnClick{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ede5e5cf;
+    width: 100%;
+    height: 250px;
+    gap: 20px;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+}
+header nav ul.dark{
+    background-color:  #000000e6;
+}
+header{
+    box-shadow: 0px 5px 8px rgba(0,0,0,0.9);
+}
+div.modeBtn{
+    position: absolute;
+    display: block;
+    top: 17px;
+    right: 37px;
+    z-index: 5;
+}
+}
+@media (max-width:896px) {
+    footer div.up{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+}
+}
+@media (max-width:572px) {
+    footer div.up{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+}
+footer div.down p{
+    font-size: 12px;
+}
+}
